@@ -1,0 +1,83 @@
+/**
+////////////////////////////////////////////////////
+//  Copyright by: Satowa Network                  //
+//  Author: Kirihito                              //
+//  Discord: https://satowa-network.at/discord    //
+//  Email: support@satowa-network.at              //
+//  Website: https://satowa-network.at            //
+////////////////////////////////////////////////////
+*/
+* {
+    --color-p-white: #838282;
+    --color-h1-white:#706f6f;
+    --background-main:#171721;
+    --background-code: #1c1c25;
+}
+body {
+    background: var(--background-main);
+    font-family: "Lato", sans-serif;
+}
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 6px 6px 1rem;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+h1, h2, h3, h4, h5, h6, li {
+    color: var(--color-h1-white)!important;
+}
+h1 {
+    font-size: x-large;
+    padding: 2px;
+}
+a {
+    color: var(--color-p-white);
+}
+p {
+    color: var(--color-p-white);
+}
+.container {
+    margin-left: 200px; /* Same as the width of the sidenav */
+}
+
+.code_section {
+    margin: 5px 0 5px 3rem;
+    text-align: center;
+    font-size: small;
+    min-width: 5rem;
+    max-width: 40rem;
+}
+pre {
+    background-color: #312f2f;
+}
+code {
+    background-color: #111111!important;
+}
+.code_section, pre, code, pln {
+    background-color: var(--background-code)!important;
+    color: var(--color-p-white)!important;
+    border-color: transparent;
+    border-radius: 3px;
+
+}
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
