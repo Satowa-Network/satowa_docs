@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
     <?php
-    $titleb="Introduction";
+    $titleb="Examples";
     include __DIR__.'/assets/php/head.php';
     ?>
     <script>
@@ -27,18 +27,23 @@ require __DIR__.'/assets/php/body.php';
         <pre id="php">
                 <code class="language-php" onclick="copyPHP()" id="php">
 
-                    $curl=curl_init();
-                    curl_setopt_array($curl,array(
-                    CURLOPT_RETURNTRANSFER => true,
-                    CURLOPT_ENCODING => '';
-                    CURLOPT_MAXREDIRS=>10,
-                    CURLOPT_TIMEOUT=>0,
-                    CURLOPT_FOLLOWLOCATION=>true,
-                    CURLOPT_HTTP_VERSION =>
-                        CURLOPT_HTTP_VERSION_1_1,
-                    CURLOPT_COSTUMREQUEST => 'POST,
+                    $curl = curl_init();
+                    curl_setopt_array($curl, array(
+                      CURLOPT_URL => 'api.satowa-network.at/reports/api.php',
+                      CURLOPT_RETURNTRANSFER => true,
+                      CURLOPT_ENCODING => '',
+                      CURLOPT_MAXREDIRS => 10,
+                      CURLOPT_TIMEOUT => 0,
+                      CURLOPT_FOLLOWLOCATION => true,
+                      CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                      CURLOPT_CUSTOMREQUEST => 'GET',
+                      CURLOPT_HTTPHEADER => array(
+                        'Access-Control-Max-Age: 3000'
+                      ),
                     ));
+
                     $response = curl_exec($curl);
+
                     curl_close($curl);
                     echo $response;
                 </code>
@@ -50,7 +55,7 @@ require __DIR__.'/assets/php/body.php';
                     var request = require('request');
                     var options = {
                       'method': 'POST',
-                      'url': 'api.satowa-network.at/api.php?test=test',
+                      'url': 'api.satowa-network.at/reports/api',
                       'headers': {
                       }
                     };
@@ -71,7 +76,7 @@ require __DIR__.'/assets/php/body.php';
                       redirect: 'follow'
                     };
 
-                    fetch("api.satowa-network.at/api.php?test=test", requestOptions)
+                    fetch("api.satowa-network.at/reports/api", requestOptions)
                       .then(response => response.text())
                       .then(result => console.log(result))
                       .catch(error => console.log('error', error));
@@ -85,7 +90,7 @@ require __DIR__.'/assets/php/body.php';
                     conn = http.client.HTTPSConnection("api.satowa-network.at")
                     payload = ''
                     headers = {}
-                    conn.request("POST", "/api.php?test=test", payload, headers)
+                    conn.request("POST", "/api", payload, headers)
                     res = conn.getresponse()
                     data = res.read()
                     print(data.decode("utf-8"))

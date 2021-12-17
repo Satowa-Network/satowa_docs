@@ -51,7 +51,7 @@
                     var request = require('request');
                     var options = {
                       'method': 'POST',
-                      'url': 'api.satowa-network.at/api.php',
+                      'url': 'api.satowa-network.at/reports/api.php',
                       'headers': {
                       }
                     };
