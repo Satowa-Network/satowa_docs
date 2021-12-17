@@ -32,7 +32,7 @@
             </li>
         </ol>
         <h2>Code Beispiele:</h2>
-        <p>Du findest Code Beispiele für PHP, JS, NodeJS und Python <a href="example.php">hier</a></p>
+        <p>Du findest Code Beispiele für PHP, JS, NodeJS und Python <a href="example.phtml">hier</a></p>
         <h1>Installation</h1>
         <p>Hier ist ein Beispiel in JS für ein Discord Bot wie du es nutzen kannst...</p>
         <div class="code_section">
