@@ -7,16 +7,16 @@
 <!--Cookie Banner Import (PLS Don\'t remove it it\'s your Privacy ;-;)-->
 <script type="application/javascript" src="https://app.usercentrics.eu/latest/main.js" id="6vktZcgq7"></script>
 <!-- Website Title  -->
-<meta property="title" content="<?php $title ?>">
-<meta property="og:title" content="<?php $title ?>">
+<meta property="title" content="<?php echo $title ?>">
+<meta property="og:title" content="<?php echo $title ?>">
 <!-- Website Title on Twitter -->
-<meta name="twitter:title" content="<?php $title ?>">
+<meta name="twitter:title" content="<?php echo $title ?>">
 <!--Manifest File Import-->
 <link rel="manifest" href="https://satowa-network.at/assets/manifest/manifest.json">
 <!--Normal Description-->
-<meta name="description" content="Das Satowa Network ist ein Österreichisches Netzwerk für die Sicherheit im Internet. Das Satowa Network wurde 2022 gegründet mit dem Ziel Das Internet Sicherer zu machen und anderen Leuten zu Helfen.">
+<meta name="description" content="Offizieller Satowa Network API DOCS">
 <!-- Website Description -->
-<meta property="og:description" content="Das Satowa Network ist ein Österreichisches Netzwerk für die Sicherheit im Internet. Das Satowa Network wurde 2022 gegründet mit dem Ziel Das Internet Sicherer zu machen und anderen Leuten zu Helfen.">
+<meta property="og:description" content="Offizieller Satowa Network API DOCS">
 <!-- Website Image -->
 <meta property="og:image" content="https://satowa-network.at/assets/img/1.png">
 <!-- Set Website Viewport -->
